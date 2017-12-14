@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
-import Planet from "../Planet/Planet";
+import Planet from "../../components/Planet/Planet";
+import Content from "../../components/Content/Content";
 
-import AboutContent from "../../components/About/AboutContent";
-import BuilderContent from "../../components/Builder/BuilderContent";
-import ChronicleContent from "../../components/Chronicle/ChronicleContent";
-import ContactContent from "../../components/Contact/ContactContent";
-import FarmContent from "../../components/Farm/FarmContent";
-import WokContent from "../../components/Wok/WokContent";
-
-import flag from "../../assets/images/flag.png";
-import dragon from "../../assets/images/dragon.png";
-import tower from "../../assets/images/tower.png";
-import barn from "../../assets/images/barn.png";
-import bowl from "../../assets/images/bowl.png";
-
-
+import {planetArray} from "../../assets/planetArray"
+import {contentArray} from "../../assets/contentArray"
 
 let modal;
 
@@ -64,15 +53,19 @@ class SpaceContainer extends Component {
         if (planetId === "sun")
             this.setState({left: !this.state.left})
         else {
-            switch (planetId) {
-                case("about"): modal = <AboutContent clicked={this.modalHandler}/>; break;
-                case("builder"): modal = <BuilderContent clicked={this.modalHandler}/>; break;
-                case("chronicle"): modal = <ChronicleContent clicked={this.modalHandler}/>; break;
-                case("contact"): modal = <ContactContent clicked={this.modalHandler}/>; break;
-                case("farm"): modal = <FarmContent clicked={this.modalHandler}/>; break;
-                case("wok"): modal = <WokContent clicked={this.modalHandler}/>; break;
-                default: console.log("fix me!")
-            }
+            
+            const content = contentArray.find((entry) => entry.name === planetId);
+            modal = (
+                    <Content
+                        name={content.name}
+                        fontClass={content.fontClass}
+                        title={content.title}
+                        website={content.website}
+                        github={content.github}
+                        body={content.body}
+                        clicked={this.modalHandler}
+                    />
+            )
             this.setState({modal: true});
         }
     }
@@ -85,97 +78,16 @@ class SpaceContainer extends Component {
     
     render() {
         
-
-        
-        const planetArray = [
-                {
-                    containerId: "about",
-                    planetId: "aboutPlanet",
-                    img: flag,
-                    children: (
-                        <div className="arc">
-                            <p id="a1">A</p><p id="a2">B</p><p id="a3">O</p><p id="a4">U</p>
-                            <p id="a5">T</p><p id="a7">M</p><p id="a8">E</p>
-                        </div>
-                        ),
-                    spin: this.state.spin.about
-                },
-                {
-                    containerId: "builder",
-                    planetId: "builderPlanet",
-                    img: "",
-                    children: (
-                        <div className="arc">
-                            <p id="c1">B</p><p id="c2">U</p><p id="c3">I</p><p id="c4">L</p>
-                            <p id="c5">D</p><p id="c6">E</p><p id="c7">R</p>
-                        </div>
-                        ),
-                    spin: this.state.spin.builder
-                },
-                {
-                    containerId: "chronicle",
-                    planetId: "chroniclePlanet",
-                    img: dragon,
-                    children: (
-                        <div className="arc">
-                            <p id="c0">C</p><p id="c1">H</p><p id="c2">R</p><p id="c3">O</p><p id="c4">N</p>
-                            <p id="c5">I</p><p id="c6">C</p><p id="c7">L</p><p id="c8">E</p>
-                        </div>
-                        ),
-                    spin: this.state.spin.chronicle
-                },
-                {
-                    containerId: "contact",
-                    planetId: "contactPlanet",
-                    img: tower,
-                    children: (
-                        <div className="arc">
-                            <p id="c1">C</p><p id="c2">O</p><p id="c3">N</p><p id="c4">T</p>
-                            <p id="c5">A</p><p id="c6">C</p><p id="c7">T</p>
-                        </div>
-                        ),
-                    spin: this.state.spin.contact
-                },
-                {
-                    containerId: "farm",
-                    planetId: "farmPlanet",
-                    img: barn,
-                    children: (
-                        <div className="arc">
-                            <p id="a3">F</p><p id="a4">A</p><p id="a5">R</p><p id="a6">M</p>
-                        </div>
-                        ),
-                    spin: this.state.spin.farm
-                },
-                {
-                    containerId: "sun",
-                    planetId: "sunStar",
-                    img:"",
-                    children: (
-                        <div className="arc">
-                            <p id="p1">P</p><p id="p2">R</p><p id="p3">O</p><p id="p4">J</p>
-                            <p id="p5">E</p><p id="p6">C</p><p id="p7">T</p><p id="p8">S</p>
-                            <p id="p9">></p>
-                        </div>
-                        ),
-                    spin: this.state.spin.sun
-                },
-                {
-                    containerId: "wok",
-                    planetId: "wokPlanet",
-                    img: bowl,
-                    children: (
-                        <div className="arc">
-                            <p id="c3">W</p><p id="c4">O</p><p id="c5">K</p>
-                        </div>
-                        ),
-                    spin: this.state.spin.wok
-                }
-            ]
+        planetArray[0].spin = this.state.spin.about;
+        planetArray[1].spin = this.state.spin.builder;
+        planetArray[2].spin = this.state.spin.chronicle;
+        planetArray[3].spin = this.state.spin.contact;
+        planetArray[4].spin = this.state.spin.farm;
+        planetArray[5].spin = this.state.spin.sun;
+        planetArray[6].spin = this.state.spin.wok;
         
         return (
-            <div 
-                className="container"
+            <div className="container"
                 style={{transform: this.state.left ? "translateX(0%)" : "translateX(-50%)"}}
             >
                 {planetArray.map(planet => (
@@ -193,9 +105,7 @@ class SpaceContainer extends Component {
                         </Planet>
                     )
                 )}
-                <div id="blurb"
-                    style={{zIndex: this.state.modal ? 1 : -1}}
-                >
+                <div id="blurb" style={{zIndex: this.state.modal ? 1 : -1}}>
                     {modal}
                 </div>
             </div>

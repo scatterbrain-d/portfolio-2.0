@@ -4,7 +4,7 @@ html, body {
     font-family: 'Space Mono', monospace;
     height: 100%;
     width: 100%;
-    background: url("images/stars.png");
+    background: url("./assets/images/stars.png");
 }
 
 h2 {margin: 0.5em;}
@@ -28,15 +28,13 @@ h2 {margin: 0.5em;}
 #blurb {
     position: absolute;
     margin:0;
-    height: 100%;
+    /*height: 100%;*/
     width: 45%;
     left:50%;
     text-align: center;
     overflow: auto;
-    z-index: -1;
+    transition: all 0.5s;
 }
-
-.right {transform: translateX(-95%);}
 
 /*MODULAR CLASSES FOR EACH PLANET*/
 
@@ -143,7 +141,7 @@ h2 {margin: 0.5em;}
 
 /*PROJECTS (SUN)*/
 
-#center {
+#sun {
     height: 35rem;
     width: 35rem;
     position: absolute;
@@ -153,9 +151,9 @@ h2 {margin: 0.5em;}
     font-size: 2em;
 }
 
-#center p {height: 45%;}
+#sun p {height: 45%;}
 
-#sun {
+#sunStar {
     height: 75%;
     width: 75%;
     top: 12.5%;
@@ -174,10 +172,9 @@ h2 {margin: 0.5em;}
     top: 60%;
 }
 
-#conta {
+#contactPlanet {
     height: 75%;
     width: 75%;
-    position: absolute;
     top: 12.5%;
     left:12.5%;
     background-image: radial-gradient(
@@ -213,7 +210,7 @@ textarea {height: 10em;}
     text-align: center;
 }
 
-#abou {
+#aboutPlanet {
     height: 75%;
     width: 75%;
     top: 12.5%;
@@ -234,7 +231,7 @@ textarea {height: 10em;}
     animation-delay: 1s;
 }
 
-#chron {
+#chroniclePlanet {
     height: 75%;
     width: 75%;
     top: 12.5%;
@@ -253,7 +250,7 @@ textarea {height: 10em;}
     top: 30%;
 }
 
-#farmon {
+#farmPlanet {
     height: 75%;
     width: 75%;
     top: 12.5%;
@@ -273,7 +270,7 @@ textarea {height: 10em;}
     animation-delay: 2s;
 }
 
-#wokof {
+#wokPlanet {
     height: 75%;
     width: 75%;
     top: 12.5%;
@@ -293,7 +290,7 @@ textarea {height: 10em;}
     animation-delay: 1.5s;
 }
 
-#build {
+#builderPlanet {
     height: 75%;
     width: 75%;
     top: 12.5%;
@@ -304,7 +301,7 @@ textarea {height: 10em;}
 
 /*ANIMATION*/
 
-.container>div {
+.wobble {
     text-align: center;
     animation-name: wobble;
     animation-duration: 3s;

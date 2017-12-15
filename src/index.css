@@ -28,12 +28,11 @@ h2 {margin: 0.5em;}
 #blurb {
     position: absolute;
     margin:0;
-    /*height: 100%;*/
-    width: 45%;
-    left:50%;
+    height: 100%;
+    width: 50%;
+    left:25%;
     text-align: center;
     overflow: auto;
-    transition: all 0.5s;
 }
 
 /*MODULAR CLASSES FOR EACH PLANET*/
@@ -125,7 +124,7 @@ h2 {margin: 0.5em;}
 
 /*PROJECT-SPECIFIC FONTS*/
 
-#chronicle-content {
+.chronicle-content {
     font-family: 'Alegreya', serif;
 }
 
@@ -299,6 +298,7 @@ textarea {height: 10em;}
         #fc0000, #720035);
 }
 
+
 /*ANIMATION*/
 
 .wobble {
@@ -317,23 +317,82 @@ textarea {height: 10em;}
 
 /*MEDIA QUERIES FOR SMALLER SCREENS*/
 
-@media (max-width: 500px) {
-    #center {
-        height: 20rem;
-        width: 20rem;
-        font-size: 1.2em;
+@media screen and (max-width: 800px) {
+    #sun {
+        height: 25rem;
+        width: 25rem;
+        top: 25%;
+        left: 45%;
+        font-size: 1.5em;
     }
-    
-    #contact {
-        height: 6rem;
-        width: 6rem;
-        font-size: 0.8em;
+     #contact {
+        height: 8rem;
+        width: 8rem;
+        font-size: 0.9em;
+        left: 10%;
     }
     
     #about {
+        height: 10rem;
+        width: 10rem;
+        font-size: 1em;
+        left: 25%;
+    }
+    
+    #chronicle {
+        height: 11rem;
+        width: 11rem;
+        font-size: 1em;
+        left: 105%;
+    }
+    
+    #farm {
         height: 8rem;
         width: 8rem;
+        font-size: 0.9em;
+        left: 125%;
+    }
+    
+    #builder {
+        height: 10rem;
+        width: 10rem;
         font-size: 1em;
+        top: 55%;
+        left: 115%;
+    }
+    
+    #wok {
+        height: 6rem;
+        width: 6rem;
+        font-size: 0.6em;
+        top: 80%;
+        left: 100%;
+    }
+    
+     #blurb {
+         position: fixed;
+         left: 12.5%;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #blurb {
+        width: 95%; 
+        left: 2.5%;
+    }
+}    
+
+
+@media screen and (max-width: 500px) {
+    #sun {
+        top: 35%;
+        left: 30%;
+    }
+    
+    #contact {
+        top: 70%;
+        left: 5%;
     }
     
     #chronicle {
@@ -348,15 +407,17 @@ textarea {height: 10em;}
         font-size: 0.8em;
     }
     
+    #builder {
+        top: 80%;
+        left:105%;
+    }
+    
     #wok {
         height: 5rem;
         width: 5rem;
         font-size: 0.6em;
-    }
-    
-    #blurb {
-        width: 95%;
-        left: 2.5%;
+        top: 55%;
+        left: 120%;
     }
     
     #sig {

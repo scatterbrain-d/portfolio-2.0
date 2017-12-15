@@ -87,26 +87,28 @@ class SpaceContainer extends Component {
         planetArray[6].spin = this.state.spin.wok;
         
         return (
-            <div className="container"
-                style={{transform: this.state.left ? "translateX(0%)" : "translateX(-50%)"}}
-            >
-                {planetArray.map(planet => (
-                        <Planet
-                            key={planet.containerId}
-                            containerId={planet.containerId}
-                            planetId={planet.planetId}
-                            mouseOver={() => this.mouseOverHandler(planet.containerId)}
-                            mouseOut={() => this.mouseOutHandler(planet.containerId)}
-                            clicked={() => this.clickHandler(planet.containerId)}
-                            img={planet.img}
-                            spin={planet.spin}
-                        >
-                            {planet.children}
-                        </Planet>
-                    )
-                )}
+            <div>
                 <div id="blurb" style={{zIndex: this.state.modal ? 1 : -1}}>
-                    {modal}
+                        {modal}
+                    </div>
+                <div className="container"
+                    style={{transform: this.state.left ? "translateX(0%)" : "translateX(-50%)"}}
+                >
+                    {planetArray.map(planet => (
+                            <Planet
+                                key={planet.containerId}
+                                containerId={planet.containerId}
+                                planetId={planet.planetId}
+                                mouseOver={() => this.mouseOverHandler(planet.containerId)}
+                                mouseOut={() => this.mouseOutHandler(planet.containerId)}
+                                clicked={() => this.clickHandler(planet.containerId)}
+                                img={planet.img}
+                                spin={planet.spin}
+                            >
+                                {planet.children}
+                            </Planet>
+                        )
+                    )}
                 </div>
             </div>
         );

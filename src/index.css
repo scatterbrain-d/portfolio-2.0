@@ -145,7 +145,7 @@ h2 {margin: 0.5em;}
     width: 35rem;
     position: absolute;
     top: 18%;
-    left: 55%;
+    left: 20%;
     animation-delay: 2s;
     font-size: 2em;
 }
@@ -167,7 +167,7 @@ h2 {margin: 0.5em;}
     height: 10rem;
     width: 10rem;
     position: absolute;
-    left: 15%;
+    left: 2%;
     top: 60%;
 }
 
@@ -202,8 +202,8 @@ textarea {height: 10em;}
     height: 12rem;
     width: 12rem;
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 10%;
+    top: 10%;
     font-size: 1.2em;
     animation-delay: 1s;
     text-align: center;
@@ -224,8 +224,8 @@ textarea {height: 10em;}
     height: 13rem;
     width: 13rem;
     position: absolute;
-    left: 125%;
-    top: 5%;
+    left: 65%;
+    top: 25%;
     font-size: 1.2em;
     animation-delay: 1s;
 }
@@ -245,8 +245,8 @@ textarea {height: 10em;}
     height: 10rem;
     width: 10rem;
     position: absolute;
-    left: 110%;
-    top: 30%;
+    left: 85%;
+    top: 10%;
 }
 
 #farmPlanet {
@@ -264,8 +264,8 @@ textarea {height: 10em;}
     height: 8rem;
     width: 8rem;
     position: absolute;
-    left: 118%;
-    top: 70%;
+    left: 90%;
+    top: 80%;
     animation-delay: 2s;
 }
 
@@ -284,8 +284,8 @@ textarea {height: 10em;}
     height: 11rem;
     width: 11rem;
     position: absolute;
-    left: 128%;
-    top: 45%;
+    left: 75%;
+    top: 60%;
     animation-delay: 1.5s;
 }
 
@@ -317,62 +317,73 @@ textarea {height: 10em;}
 
 /*MEDIA QUERIES FOR SMALLER SCREENS*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     #sun {
-        height: 25rem;
-        width: 25rem;
-        top: 25%;
-        left: 45%;
+        height: 30rem;
+        width: 30rem;
         font-size: 1.5em;
     }
+}
+
+@media screen and (max-width: 800px) {
+    
+    #sun {
+        left: 15%;
+    }
+    
      #contact {
         height: 8rem;
         width: 8rem;
         font-size: 0.9em;
-        left: 10%;
     }
     
     #about {
         height: 10rem;
         width: 10rem;
         font-size: 1em;
-        left: 25%;
     }
     
     #chronicle {
         height: 11rem;
         width: 11rem;
         font-size: 1em;
-        left: 105%;
     }
     
     #farm {
         height: 8rem;
         width: 8rem;
         font-size: 0.9em;
-        left: 125%;
+        top: 5%;
+        left: 65%;
     }
     
     #builder {
         height: 10rem;
         width: 10rem;
         font-size: 1em;
-        top: 55%;
-        left: 115%;
     }
     
     #wok {
         height: 6rem;
         width: 6rem;
         font-size: 0.6em;
-        top: 80%;
-        left: 100%;
     }
     
      #blurb {
-         position: fixed;
-         left: 12.5%;
+        position: fixed;
         width: 75%;
+        left: 12.5%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #sun {
+        height: 25rem;
+        width: 25rem;
+    }
+    
+    #wok {
+        left: 60%;
     }
 }
 
@@ -386,42 +397,72 @@ textarea {height: 10em;}
 
 @media screen and (max-width: 500px) {
     #sun {
-        top: 35%;
-        left: 30%;
+        height: 20rem;
+        width: 20rem;
+        top: 30%;
     }
     
     #contact {
-        top: 70%;
-        left: 5%;
+        
+       top: 75%;
     }
     
     #chronicle {
-        height: 9rem;
-        width: 9rem;
-        font-size: 1em;
+
     }
     
     #farm {
-        height: 7rem;
-        width: 7rem;
-        font-size: 0.8em;
+        
+        left: 55%;
     }
     
     #builder {
-        top: 80%;
-        left:105%;
+        top: 70%;
+        left: 70%;
     }
     
     #wok {
         height: 5rem;
         width: 5rem;
         font-size: 0.6em;
-        top: 55%;
-        left: 120%;
+        top: 85%;
+        left: 45%;
     }
     
     #sig {
         left:1%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #sun {
+        height: 18rem;
+        width: 18rem;
+        top: 35%;
+    }
+    
+    #contact {
+        top: 5%;
+        left: 55%;
+        height: 7rem;
+        width: 7rem;
+    }
+    
+    #chronicle {
+        height: 8rem;
+        width: 8rem;
+    }
+    
+    #farm {
+        top: 75%;
+        left: 2%;
+        height: 7rem;
+        width: 7rem;
+    }
+    
+    #builder {
+        height: 8rem;
+        width: 8rem;
     }
 }
 

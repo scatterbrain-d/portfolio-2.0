@@ -78,12 +78,12 @@ class SpaceContainer extends Component {
     
     render() {
         
-        planetArray[0].spin = this.state.spin.about;
-        planetArray[1].spin = this.state.spin.builder;
-        planetArray[2].spin = this.state.spin.chronicle;
-        planetArray[3].spin = this.state.spin.contact;
-        planetArray[4].spin = this.state.spin.farm;
-        planetArray[5].spin = this.state.spin.sun;
+        planetArray[0].spin = this.state.spin.sun;
+        planetArray[1].spin = this.state.spin.about;
+        planetArray[2].spin = this.state.spin.builder;
+        planetArray[3].spin = this.state.spin.chronicle;
+        planetArray[4].spin = this.state.spin.contact;
+        planetArray[5].spin = this.state.spin.farm;
         planetArray[6].spin = this.state.spin.wok;
         
         return (

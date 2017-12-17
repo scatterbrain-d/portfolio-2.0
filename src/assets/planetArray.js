@@ -8,6 +8,19 @@ import bowl from "./images/bowl.png";
 
 export const planetArray = [
     {
+        containerId: "sun",
+        planetId: "sunStar",
+        img:"",
+        children: (
+            <div className="arc">
+                <p id="p1">P</p><p id="p2">R</p><p id="p3">O</p><p id="p4">J</p>
+                <p id="p5">E</p><p id="p6">C</p><p id="p7">T</p><p id="p8">S</p>
+                <p id="p9">></p>
+            </div>
+            ),
+        spin: ""
+    },
+    {
         containerId: "about",
         planetId: "aboutPlanet",
         img: flag,
@@ -62,19 +75,6 @@ export const planetArray = [
         children: (
             <div className="arc">
                 <p id="a3">F</p><p id="a4">A</p><p id="a5">R</p><p id="a6">M</p>
-            </div>
-            ),
-        spin: ""
-    },
-    {
-        containerId: "sun",
-        planetId: "sunStar",
-        img:"",
-        children: (
-            <div className="arc">
-                <p id="p1">P</p><p id="p2">R</p><p id="p3">O</p><p id="p4">J</p>
-                <p id="p5">E</p><p id="p6">C</p><p id="p7">T</p><p id="p8">S</p>
-                <p id="p9">></p>
             </div>
             ),
         spin: ""

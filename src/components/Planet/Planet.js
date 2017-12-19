@@ -1,8 +1,14 @@
 import React from 'react';
 
 const planet = (props) => {
+    
+    const classPosition = props.shifted ? props.pos1 : props.pos2;
+    
     return (
-        <div id={props.containerId} className="wobble">
+        <div id={props.containerId} 
+            className={classPosition + " wobble"}
+            style={{transform: props.shifted ? props.shift : null }}
+        >
             <div 
                 className="turntable"
                 style={{transform: props.spin ? "rotate(180deg)" : "rotate(0deg)"}}

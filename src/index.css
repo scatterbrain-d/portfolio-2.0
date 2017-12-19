@@ -167,8 +167,16 @@ h2 {margin: 0.5em;}
     height: 10rem;
     width: 10rem;
     position: absolute;
-    left: 2%;
+}
+
+.contact1 {
     top: 60%;
+    left: 2%;
+}
+
+.contact2 {
+    top: 30%;
+    left:75%;
 }
 
 #contactPlanet {
@@ -202,11 +210,19 @@ textarea {height: 10em;}
     height: 12rem;
     width: 12rem;
     position: absolute;
-    left: 10%;
-    top: 10%;
     font-size: 1.2em;
     animation-delay: 1s;
     text-align: center;
+}
+
+.about1 {
+    top: 10%;
+    left: 10%;
+}
+
+.about2 {
+    top: 60%;
+    left: 75%;
 }
 
 #aboutPlanet {
@@ -224,10 +240,19 @@ textarea {height: 10em;}
     height: 13rem;
     width: 13rem;
     position: absolute;
-    left: 65%;
-    top: 25%;
     font-size: 1.2em;
     animation-delay: 1s;
+
+}
+
+.chronicle1 {
+    top: 25%;
+    left: 65%;
+}
+
+.chronicle2 {
+    top: 75%;
+    left: 55%;
 }
 
 #chroniclePlanet {
@@ -245,8 +270,16 @@ textarea {height: 10em;}
     height: 10rem;
     width: 10rem;
     position: absolute;
-    left: 85%;
+}
+
+.farm1 {
     top: 10%;
+    left: 85%;
+}
+
+.farm2 {
+    top: 70%;
+    left: 10%;
 }
 
 #farmPlanet {
@@ -264,9 +297,17 @@ textarea {height: 10em;}
     height: 8rem;
     width: 8rem;
     position: absolute;
-    left: 90%;
-    top: 80%;
     animation-delay: 2s;
+}
+
+.wok1 {
+    top: 80%;
+    left: 90%;
+}
+
+.wok2 {
+    top: 10%;
+    left: 5%;
 }
 
 #wokPlanet {
@@ -284,9 +325,18 @@ textarea {height: 10em;}
     height: 11rem;
     width: 11rem;
     position: absolute;
-    left: 75%;
-    top: 60%;
     animation-delay: 1.5s;
+    transition: all 2s;
+}
+
+.builder1 {
+    top: 60%;
+    left: 75%;
+}
+
+.builder2 {
+    top: 10%;
+    left: 65%;
 }
 
 #builderPlanet {
@@ -307,6 +357,7 @@ textarea {height: 10em;}
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    transition: all 2s;
 }
 
 @keyframes wobble {
@@ -328,6 +379,8 @@ textarea {height: 10em;}
 @media screen and (max-width: 800px) {
     
     #sun {
+        height: 25rem;
+        width: 25rem;
         left: 15%;
     }
     
@@ -353,8 +406,11 @@ textarea {height: 10em;}
         height: 8rem;
         width: 8rem;
         font-size: 0.9em;
+    }
+    
+    .farm1 {
         top: 5%;
-        left: 65%;
+        left: 55%;
     }
     
     #builder {
@@ -369,21 +425,14 @@ textarea {height: 10em;}
         font-size: 0.6em;
     }
     
+    .wok1 {
+        left: 45%;
+    }
+    
      #blurb {
         position: fixed;
         width: 75%;
         left: 12.5%;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    #sun {
-        height: 25rem;
-        width: 25rem;
-    }
-    
-    #wok {
-        left: 60%;
     }
 }
 
@@ -394,7 +443,6 @@ textarea {height: 10em;}
     }
 }    
 
-
 @media screen and (max-width: 500px) {
     #sun {
         height: 20rem;
@@ -402,32 +450,32 @@ textarea {height: 10em;}
         top: 30%;
     }
     
-    #contact {
-        
-       top: 75%;
-    }
-    
-    #chronicle {
+.wok1 {
+    left:35%;
+}
 
-    }
-    
-    #farm {
-        
-        left: 55%;
-    }
-    
-    #builder {
-        top: 70%;
-        left: 70%;
-    }
-    
-    #wok {
-        height: 5rem;
-        width: 5rem;
-        font-size: 0.6em;
-        top: 85%;
-        left: 45%;
-    }
+.builder1 {
+    left: 60%;
+}
+
+.builder2 {
+    top: 5%;
+    left: 55%;
+}
+
+.farm2 {
+    top: 60%;
+    left: 5%;
+}
+
+.chronicle2 {
+    left: 25%;
+}
+
+.about2 {
+    top: 65%;
+    left: 55%;
+}
     
     #sig {
         left:1%;
@@ -442,10 +490,12 @@ textarea {height: 10em;}
     }
     
     #contact {
-        top: 5%;
-        left: 55%;
         height: 7rem;
         width: 7rem;
+    }
+    
+    .contact2 {
+        left: 15%;
     }
     
     #chronicle {
@@ -454,8 +504,6 @@ textarea {height: 10em;}
     }
     
     #farm {
-        top: 75%;
-        left: 2%;
         height: 7rem;
         width: 7rem;
     }

@@ -10,7 +10,7 @@ let modal;
 class SpaceContainer extends Component {
     
     state = {
-        left: true,
+        shifted: false,
         modal: false,
         spin: {
             about: false,
@@ -51,7 +51,7 @@ class SpaceContainer extends Component {
     
     clickHandler(planetId) {
         if (planetId === "sun")
-            this.setState({left: !this.state.left})
+            this.setState({shifted: !this.state.shifted});
         else {
             
             const content = contentArray.find((entry) => entry.name === planetId);
@@ -91,9 +91,7 @@ class SpaceContainer extends Component {
                 <div id="blurb" style={{zIndex: this.state.modal ? 1 : -1}}>
                         {modal}
                     </div>
-                <div className="container"
-                    style={{transform: this.state.left ? "translateX(0%)" : "translateX(-50%)"}}
-                >
+                <div className="container">
                     {planetArray.map(planet => (
                             <Planet
                                 key={planet.containerId}
@@ -102,6 +100,9 @@ class SpaceContainer extends Component {
                                 mouseOver={() => this.mouseOverHandler(planet.containerId)}
                                 mouseOut={() => this.mouseOutHandler(planet.containerId)}
                                 clicked={() => this.clickHandler(planet.containerId)}
+                                shifted={this.state.shifted}
+                                pos1={planet.pos1}
+                                pos2={planet.pos2}
                                 img={planet.img}
                                 spin={planet.spin}
                             >

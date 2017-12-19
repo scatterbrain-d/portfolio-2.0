@@ -11,14 +11,17 @@ export const planetArray = [
         containerId: "sun",
         planetId: "sunStar",
         img:"",
-        children: (
-            <div className="arc">
-                <p id="p1">P</p><p id="p2">R</p><p id="p3">O</p><p id="p4">J</p>
-                <p id="p5">E</p><p id="p6">C</p><p id="p7">T</p><p id="p8">S</p>
-                <p id="p9">></p>
-            </div>
-            ),
-        spin: ""
+        children: 
+        // (   <div className="arc">
+        //         <p id="p1">P</p><p id="p2">R</p><p id="p3">O</p><p id="p4">J</p>
+        //         <p id="p5">E</p><p id="p6">C</p><p id="p7">T</p><p id="p8">S</p>
+        //         <p id="p9">></p>
+        //     </div>)
+        "",
+        spin: "",
+        shifted: "",
+        pos1: "",
+        pos2:""
     },
     {
         containerId: "about",
@@ -30,7 +33,10 @@ export const planetArray = [
                 <p id="a5">T</p><p id="a7">M</p><p id="a8">E</p>
             </div>
             ),
-        spin: ""
+        spin: "",
+        shifted: "",
+        pos1: "about1",
+        pos2:"about2"
     },
     {
         containerId: "builder",
@@ -42,7 +48,10 @@ export const planetArray = [
                 <p id="c5">D</p><p id="c6">E</p><p id="c7">R</p>
             </div>
             ),
-        spin: ""
+        spin: "",
+        shifted: "",
+        pos1: "builder1",
+        pos2:"builder2"
     },
     {
         containerId: "chronicle",
@@ -54,7 +63,10 @@ export const planetArray = [
                 <p id="c5">I</p><p id="c6">C</p><p id="c7">L</p><p id="c8">E</p>
             </div>
             ),
-        spin: ""
+        spin: "",
+        shifted: "",
+        pos1: "chronicle1",
+        pos2:"chronicle2"
     },
     {
         containerId: "contact",
@@ -66,7 +78,10 @@ export const planetArray = [
                 <p id="c5">A</p><p id="c6">C</p><p id="c7">T</p>
             </div>
             ),
-        spin: ""
+        spin: "",
+        shifted: "",
+        pos1: "contact1",
+        pos2:"contact2"
     },
     {
         containerId: "farm",
@@ -77,7 +92,10 @@ export const planetArray = [
                 <p id="a3">F</p><p id="a4">A</p><p id="a5">R</p><p id="a6">M</p>
             </div>
             ),
-        spin: ""
+        spin: "",
+        shifted: "",
+        pos1: "farm1",
+        pos2:"farm2"
     },
     {
         containerId: "wok",
@@ -88,6 +106,9 @@ export const planetArray = [
                 <p id="c3">W</p><p id="c4">O</p><p id="c5">K</p>
             </div>
             ),
-        spin: ""
+        spin: "",
+        shifted: "",
+        pos1: "wok1",
+        pos2:"wok2"
     }
 ];

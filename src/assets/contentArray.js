@@ -110,12 +110,11 @@ export const contentArray = [
         github: "",
         body: (
             <div>
-                <p>
-                    Contact me by
-                    
-                    , or send me
-                    a message with the form below.
-                </p>
+                <p><strong>
+                    Contact me by <a href="mailto:andy.finnell@gmail.com">email</a>, 
+                    or send me a message with the form below.
+                </strong></p>
+                <hr/>
                 <form action="https://formspree.io/andy.finnell@gmail.com" method="POST">
                     <div>
                         <label id="name">Name: </label>
@@ -129,7 +128,8 @@ export const contentArray = [
                         <label id="company">Company: </label>
                         <input id="company" type="text" name="compnay"/>
                     </div>
-                    <textarea name="content"></textarea>
+                        <label id="message">Message: </label>
+                        <textarea name="content"></textarea>
                     <div><button type="submit">Submit</button></div>
                 </form>
             </div>    

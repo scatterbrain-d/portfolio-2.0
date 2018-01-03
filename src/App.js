@@ -6,7 +6,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                <img id="sig" src={sig} alt="logo"/>
+                <div id="sig">
+                    <img src={sig} alt="logo"/><span>design</span>
+                </div>
                 <SpaceContainer/>
             </div>
         );

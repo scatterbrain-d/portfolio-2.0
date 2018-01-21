@@ -58,11 +58,13 @@ export const contentArray = [
                     <li>Single page format with React</li>
                     <li>State management via Redux</li>
                     <li>Responsive layout with CSS grid</li>
+                    <li>Form validation</li>
+                    <li>CSS modules</li>
+                    <li>User authentication via Firebase</li>
+                    <li>Database to save creations via Firebase</li>
                 </ul>
                 <p>Future updates will add:</p>
                 <ul>
-                    <li>User authentication</li>
-                    <li>Backend architecture with a database to save creations</li>
                     <li>Ability to share creations with others</li>
                     <li>"Battle mode" for use during a game</li>
                 </ul>
